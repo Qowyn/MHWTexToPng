@@ -40,7 +40,7 @@ namespace TexToPng
                 Console.Error.WriteLine("ERROR: Source and Destination are the same path.");
                 return -2;
             }
-            Directory.CreateDirectory(Path.GetDirectoryName(args[1]));
+            Directory.CreateDirectory(Path.GetDirectoryName(destPath));
 
             OpenGL gl = new OpenGL();
             if (!gl.Create(OpenGLVersion.OpenGL4_2, RenderContextType.HiddenWindow, 1, 1, 32, null))
